@@ -1,0 +1,29 @@
+---
+import { rich } from '../../lib/rich';
+import Globe from '../decorations/Globe.astro';
+import SmartPpeIcon from '../decorations/SmartPpeIcon.astro';
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  subtitle?: string;
+  pill?: { text: string; icon?: string };
+  decoration?: string;
+}
+
+const { eyebrow, title, subtitle, pill, decoration } = Astro.props;
+---
+<div class="slide-inner">
+  <div class="eyebrow">{eyebrow}</div>
+  <h1 set:html={rich(title)} />
+  {subtitle && <p class="subtitle" set:html={rich(subtitle)} />}
+  {pill && (
+    <div style="margin-top:48px;opacity:0;transform:translateY(20px)" class="reveal-on-active">
+      <div style="display:inline-flex;align-items:center;gap:16px;background:rgba(204,255,0,0.08);border:1px solid rgba(204,255,0,0.2);border-radius:60px;padding:12px 28px;">
+        {pill.icon === 'smart-ppe-radar' && <SmartPpeIcon />}
+        <span style="font-size:clamp(18px,2.2vw,28px);font-weight:700;letter-spacing:-0.02em" set:html={rich(pill.text)} />
+      </div>
+    </div>
+  )}
+</div>
+{decoration === 'globe' && <Globe />}

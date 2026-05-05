@@ -1,0 +1,31 @@
+---
+import { rich } from '../../lib/rich';
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  items: { text: string; value: string }[];
+  conclusion: { label: string; value: string; caption: string };
+}
+
+const { eyebrow, title, items, conclusion } = Astro.props;
+---
+<div class="slide-inner">
+  <div class="eyebrow">{eyebrow}</div>
+  <h2 set:html={rich(title)} />
+  <ul class="bullet-list">
+    {items.map((item) => (
+      <li>
+        <span set:html={rich(item.text)} />
+        <span class="opportunity-value" set:html={rich(item.value)} />
+      </li>
+    ))}
+  </ul>
+  <div style="margin-top:48px;text-align:center;opacity:0;transform:scale(0.9)" class="reveal-pop">
+    <div style="display:inline-block;padding:24px 48px;border:2px solid var(--lime);border-radius:20px;background:rgba(204,255,0,0.04)">
+      <div style="font-size:clamp(14px,1.2vw,16px);color:var(--text-dim);margin-bottom:8px;font-weight:400">{conclusion.label}</div>
+      <div style="font-size:clamp(48px,7vw,96px);font-weight:900;letter-spacing:-0.04em;background:linear-gradient(135deg,var(--lime),#a0ff00,var(--teal-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1">{conclusion.value}</div>
+      <div style="font-size:clamp(16px,1.4vw,22px);color:var(--text);margin-top:4px;font-weight:600">{conclusion.caption}</div>
+    </div>
+  </div>
+</div>

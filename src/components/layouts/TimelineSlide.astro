@@ -1,0 +1,25 @@
+---
+import { rich } from '../../lib/rich';
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  subtitle?: string;
+  items: { year: string; desc: string }[];
+}
+
+const { eyebrow, title, subtitle, items } = Astro.props;
+---
+<div class="slide-inner">
+  <div class="eyebrow">{eyebrow}</div>
+  <h2 set:html={rich(title)} />
+  {subtitle && <p class="subtitle" set:html={rich(subtitle)} />}
+  <div class="timeline">
+    {items.map((item) => (
+      <div class="timeline-item">
+        <div class="year">{item.year}</div>
+        <div class="desc" set:html={rich(item.desc)} />
+      </div>
+    ))}
+  </div>
+</div>

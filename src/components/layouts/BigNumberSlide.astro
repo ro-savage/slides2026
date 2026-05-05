@@ -1,0 +1,23 @@
+---
+import { rich } from '../../lib/rich';
+import SignalRings from '../decorations/SignalRings.astro';
+
+interface Props {
+  eyebrow: string;
+  number: string;
+  title: string;
+  bullets: string[];
+  decoration?: string;
+}
+
+const { eyebrow, number, title, bullets, decoration } = Astro.props;
+---
+<div class="slide-inner">
+  <div class="eyebrow">{eyebrow}</div>
+  <div class="big-number">{number}</div>
+  <h2 style="margin-top:16px" set:html={rich(title)} />
+  <ul class="bullet-list">
+    {bullets.map((b) => <li set:html={rich(b)} />)}
+  </ul>
+</div>
+{decoration === 'signal-rings' && <SignalRings />}

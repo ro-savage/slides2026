@@ -1,0 +1,32 @@
+---
+import type { SlideData } from '../content.config';
+import HeroSlide from './layouts/HeroSlide.astro';
+import TimelineSlide from './layouts/TimelineSlide.astro';
+import BigNumberSlide from './layouts/BigNumberSlide.astro';
+import StatsGridSlide from './layouts/StatsGridSlide.astro';
+import DemandSlide from './layouts/DemandSlide.astro';
+import NetworkSlide from './layouts/NetworkSlide.astro';
+import OpportunitySlide from './layouts/OpportunitySlide.astro';
+import ClosingSlide from './layouts/ClosingSlide.astro';
+
+interface Props {
+  index: number;
+  data: SlideData;
+}
+
+const { index, data } = Astro.props;
+const isFirst = index === 0;
+---
+<div
+  class:list={['slide', `layout-${data.layout}`, isFirst && 'active']}
+  data-index={index}
+>
+  {data.layout === 'hero' && <HeroSlide {...data} />}
+  {data.layout === 'timeline' && <TimelineSlide {...data} />}
+  {data.layout === 'big-number' && <BigNumberSlide {...data} />}
+  {data.layout === 'stats-grid' && <StatsGridSlide {...data} />}
+  {data.layout === 'demand' && <DemandSlide {...data} />}
+  {data.layout === 'network' && <NetworkSlide {...data} />}
+  {data.layout === 'opportunity' && <OpportunitySlide {...data} />}
+  {data.layout === 'closing' && <ClosingSlide {...data} />}
+</div>

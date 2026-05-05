@@ -1,0 +1,41 @@
+---
+import { rich } from '../../lib/rich';
+import NetworkGraph from '../decorations/NetworkGraph.astro';
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  subtitle?: string;
+  stats: { value: string; label: string; tone: 'lime' | 'teal' }[];
+  decoration?: string;
+}
+
+const { eyebrow, title, subtitle, stats, decoration } = Astro.props;
+
+const VALUE_STYLE = {
+  lime: 'font-size:clamp(40px,5vw,64px);font-weight:900;color:var(--lime);letter-spacing:-0.03em;line-height:1',
+  teal: 'font-size:clamp(28px,3vw,40px);font-weight:800;color:var(--teal-light);letter-spacing:-0.02em;line-height:1',
+} as const;
+---
+<div class="slide-inner">
+  <div class="eyebrow">{eyebrow}</div>
+  <h2 set:html={rich(title)} />
+  {subtitle && <p class="subtitle" style="margin-bottom:8px" set:html={rich(subtitle)} />}
+  <div class="two-col" style="margin-top:28px">
+    <div>
+      {stats.map((s, i) => (
+        <div
+          style={`${i > 0 ? 'margin-top:24px;' : 'margin-bottom:24px;'}opacity:0;transform:translateY(20px)`}
+          class="reveal-on-active"
+          data-delay={i * 300}
+        >
+          <div style={VALUE_STYLE[s.tone]}>{s.value}</div>
+          <div style="font-size:clamp(14px,1.4vw,18px);color:var(--text-dim);margin-top:8px" set:html={rich(s.label)} />
+        </div>
+      ))}
+    </div>
+    <div class="col-visual">
+      {decoration === 'network' && <NetworkGraph />}
+    </div>
+  </div>
+</div>
