@@ -1,6 +1,6 @@
 Slide 1 — Vision
 The future of safety equipment.
-By 2035, every piece of critical safety equipment will carry a traceable digital identity.
+By 2035, every piece of critical safety equipment will carry a digital identity.
 1 billion pieces of equipment manufactured every year — each one tracked, verified, and connected.
 This is SmartPPE.
 
@@ -43,7 +43,7 @@ If Scannable captures one industry's PPE as SmartPPE, every buyer in that indust
 
 Slide 6 — Buyers (Evidence: demand)
 Buyers are already demanding this.
-- 500 customers today manually apply 200,000 retrofit tags to existing equipment
+- 500 customers today manually apply 100,000 retrofit tags to existing equipment
 - Each retrofit costs $5 tag + $20 labour + $1 SaaS = $26 per item — and they pay it
 - SmartPPE drops the entry cost to $1 — and saves hundreds of dollars in labour over the life of the item
 - 3 billion items already require records, compliance checks and inspections — mostly on paper and spreadsheets
@@ -83,10 +83,10 @@ Slide 11 — Path
 Path forward.
 Path to 1 billion items.
 - 2026: Focused on Fall Protection. Contracts cover 4% of items manufactured, 50% in active negotiations.
-- 2027 — 2028: 75% of Fall Protection covered. Momentum to 90%. $300M opportunity. $6M revenue.
+- 2027 — 2028: 75% of Fall Protection covered. $300M opportunity. $6M revenue.
 - 2029 — 2030: Capital raise. Expand to 5 adjacent industries, capturing 50% of each. 100M SmartPPE produced.
-- 2031: IPO at approx $100M revenue, growing 250% YoY.
-- 2032 — 2035: Expand to all PPE industries. $1.5B in revenue. 1B SmartPPE produced.
+- 2031: IPO at approx $100M revenue, growing 250% YoY. 1.5B opportunity.
+- 2032 — 2035: Expand to all PPE industries. $1.5B in revenue. 1B SmartPPE produced. 4.6B opportunity.
 - Onwards: Path to $4B in revenue.
 
 Slide 12 — Rallying cry
