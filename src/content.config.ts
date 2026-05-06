@@ -15,6 +15,20 @@ const heroSchema = z.object({
   decoration: z.enum(['globe']).optional(),
 });
 
+const pillarsSchema = z.object({
+  layout: z.literal('pillars'),
+  eyebrow: z.string(),
+  title: z.string(),
+  subtitle: z.string().optional(),
+  pillars: z.array(
+    z.object({
+      label: z.string(),
+      title: z.string(),
+      desc: z.string(),
+    }),
+  ),
+});
+
 const timelineSchema = z.object({
   layout: z.literal('timeline'),
   eyebrow: z.string(),
@@ -91,6 +105,50 @@ const opportunitySchema = z.object({
   }),
 });
 
+const mechanicsSchema = z.object({
+  layout: z.literal('mechanics'),
+  eyebrow: z.string(),
+  title: z.string(),
+  subtitle: z.string().optional(),
+  steps: z.array(
+    z.object({
+      label: z.string(),
+      title: z.string(),
+      desc: z.string(),
+    }),
+  ),
+  pricing: z.array(
+    z.object({
+      amount: z.string(),
+      label: z.string(),
+    }),
+  ),
+});
+
+const thesisSchema = z.object({
+  layout: z.literal('thesis'),
+  eyebrow: z.string(),
+  title: z.string(),
+  hypothesis: z.string(),
+  steps: z.array(z.string()),
+});
+
+const trajectorySchema = z.object({
+  layout: z.literal('trajectory'),
+  eyebrow: z.string(),
+  title: z.string(),
+  subtitle: z.string().optional(),
+  fillPercent: z.number().min(0).max(100),
+  phases: z.array(
+    z.object({
+      eyebrow: z.string(),
+      stat: z.string(),
+      desc: z.string(),
+      tone: z.enum(['past', 'present', 'future']).default('past'),
+    }),
+  ),
+});
+
 const closingSchema = z.object({
   layout: z.literal('closing'),
   eyebrow: z.string(),
@@ -106,15 +164,37 @@ const closingSchema = z.object({
   decoration: z.enum(['growth-line']).optional(),
 });
 
+const raiseSchema = z.object({
+  layout: z.literal('raise'),
+  eyebrow: z.string(),
+  title: z.string(),
+  raise: z.object({
+    amount: z.string(),
+    valuation: z.string(),
+  }),
+  uses: z.array(
+    z.object({
+      headline: z.string(),
+      label: z.string(),
+    }),
+  ),
+  footer: z.string(),
+});
+
 const slideSchema = z.discriminatedUnion('layout', [
   heroSchema,
+  pillarsSchema,
   timelineSchema,
   bigNumberSchema,
   statsGridSchema,
   demandSchema,
   networkSchema,
   opportunitySchema,
+  mechanicsSchema,
+  thesisSchema,
+  trajectorySchema,
   closingSchema,
+  raiseSchema,
 ]);
 
 export const collections = {

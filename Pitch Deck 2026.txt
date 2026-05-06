@@ -1,0 +1,95 @@
+Slide 1:
+By 2035, every piece of critical safety equipment will carry a traceable digital identity.
+That is 1 billion pieces of equipment manufactured each year - each one tracked, verified and connected
+
+Slide 2:
+There is one major player in this space. Scannable.
+Scannable is the hardware and software layer for connected safety equipment. We have built the hardware, collected the date, built the software, hold the patents and established relations with hundreds of manufacturers,
+
+Slide 3:
+100% adoption by 2035. Why is this inevitable?
+EU Digital Product Passport - Mandated regulation for all EU manuf
+ANSI Digital Identity Standard - American Standards currently investigating their own standard.
+Global momentum - China, Taiwan, India and other major markets poised to follow US and EU
+Demand already exists - We are working with dozens of manufacturers and hundreds of buyers
+Network Efforts - One critical mass of manufacturers adept SmartPPE, holdout can’t compete
+
+Slide 4:
+How it works
+Scannable partners with manufacturers to create digital identities and embed them in equipment (NFCs, Datagrids, RFID, QR)
+Equipment owners purchase equipment that is legally required to be inventoried, inspected and compliance records kept
+Scannable works automatically with all SmartPPE avoiding any manual data entry, paper records, lost inventory or missed inspections
+Equipment Owners can also manually tag non SmartPPE to make them smart.
+Scannable charges $1 per item per year to equipment owners to manage equipment.
+Scannable charges manufacturers a small amount ($0.20) to create digital identities.
+Scannable makes a small margin on all hardware it sells to Equipment Owners and Manufacturers focusing on a adoption not profit.
+
+Slide 5:
+The thesis
+If Scannable captures one specific industries PPE as SmartPPE. The buyers will default to using Scannable to manage their equipment.
+Scannable chose “Fall Protection” as first industry to prove the thesis.
+Scannable first proved demand (500 Equipment Owners, including some of the worlds biggest purchases).
+Scannable then worked with Manufacturers to embed tags at manufacturer time (50 manufacturers covering 4% of Fall Protection, in negotiations with 100 more covering 60% of market)
+Scannable incentives manufacturer adoption through buyer demand, and services to manufacturers (product analytics, recalls, industry research, equipment ordering via Scannable)
+
+Slide 6: 
+Evidence:Buyers are already demanding this.
+Scannable built demand my allow Equipment Owners to tag their own equipment using “Retrofit” tags to prove demand.500 customers today manually apply Scannable tags to existing equipment
+Each retrofit tag costs about $5 tag price + $20 in labour + $1 SaaS cost
+SmartPPE reduces the tag cost to $0 & labour to $0.
+There are 3 billion items already require records, compliance checks and inspections - mostly done on paper and spreadsheets
+SmartPPE drops our customer barrier to entry from $26 per item to $1 per item, and saving $100 of dollars in labour over the life if the item.
+Scannable takes $1 per item managed on on our system
+
+Slide 7:
+Evidence: Manufacturers are lining up
+4 years to gain traction covering 4% of market.
+Now in direct negotiations to cover 60% of market
+Manufacturers signing Letters of Intent to join queue, as Scannable doesn’t have capacity to onboard the demand.
+
+Slide 8:
+One system to rule them all.
+It makes strategic sense for all manufacturers to operate on a single platform and for every equipment owner to be on that system too.
+Network effect is key to growth and a real moat
+Once on the system, customer can also order equipment
+50 billion of PPE purchased annual
+3% common on orders through Scannable
+
+Slide 9:
+Do you believe?
+A single system across all manufacturers will win over fragmented solutions?
+Every piece of safety equipment will require a digital record ($0.20)? - 100M ARR
+Each item needs to be inventoried, recorded and inspected? ($1) - 3 billion ARR
+People will re-order through the system that tells them exactly when and what to replace? - 1.5 Billion Revenue
+
+Total 4.6 billion opportunity
+
+Slide 10:
+SmartPPE Today: Built, patented, unmatched.
+Scannabe is the only worldwide database and platform covering digital identity, compliance and tracing for critical safety equipment.
+
+Today:- 50 manufacturers- 500 purchasers- 250,000 SmartPPE produced- 1000 products
+- Data on 75,000 products
+
+Slide 11:
+SmartPPE Future: Path to 1 billion
+2026: Focused on “Fall Protection”. Contracts current cover 4% of all items manufactured with 25% in negotiations.2027-2028: 50% of “Fall Protection” covered. Momentum to 90%. $300m USD opportunity.
+2029-2030: Capital raise, expand to adjust industries. Expand to cover 50% of 5 adjacent industrie2031: IPO at approx 200m in Revenue, growing at 250%.
+2032-2035: Expand to cover all PPE industries. 1.5 billion in revenue.Onwards: Path to 3 billion in revenue.
+
+Slide 13:
+The future is safety equipment manage is digital.
+This is not a question of if, or even when. It’s about who gets there first.
+
+Scannable is the only player in the market. We have the pieces in place for rapid expansion.
+
+We are focused on growth and market capture, pivoting to profit in 2030.
+
+Slide 14:
+Raise
+Are are seeking 10m @ 50m USD valuation to:
+Expand the manufacturer adoption team by 5x.
+Double the engineering, sales and other teams.
+Purchase the digital identity software of one of the largest manufacturers and convert them to SmartPPE.
+We expect to raise again in 2028/2029 having fully proven the market capture thesis, and expand to additional PPE industries.
+We expect to IPO in 2030/31 to expand to all industries.

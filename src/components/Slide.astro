@@ -1,13 +1,18 @@
 ---
 import type { SlideData } from '../content.config';
 import HeroSlide from './layouts/HeroSlide.astro';
+import PillarsSlide from './layouts/PillarsSlide.astro';
 import TimelineSlide from './layouts/TimelineSlide.astro';
 import BigNumberSlide from './layouts/BigNumberSlide.astro';
 import StatsGridSlide from './layouts/StatsGridSlide.astro';
 import DemandSlide from './layouts/DemandSlide.astro';
 import NetworkSlide from './layouts/NetworkSlide.astro';
 import OpportunitySlide from './layouts/OpportunitySlide.astro';
+import MechanicsSlide from './layouts/MechanicsSlide.astro';
+import ThesisSlide from './layouts/ThesisSlide.astro';
+import TrajectorySlide from './layouts/TrajectorySlide.astro';
 import ClosingSlide from './layouts/ClosingSlide.astro';
+import RaiseSlide from './layouts/RaiseSlide.astro';
 
 interface Props {
   index: number;
@@ -22,11 +27,16 @@ const isFirst = index === 0;
   data-index={index}
 >
   {data.layout === 'hero' && <HeroSlide {...data} />}
+  {data.layout === 'pillars' && <PillarsSlide {...data} />}
   {data.layout === 'timeline' && <TimelineSlide {...data} />}
   {data.layout === 'big-number' && <BigNumberSlide {...data} />}
   {data.layout === 'stats-grid' && <StatsGridSlide {...data} />}
   {data.layout === 'demand' && <DemandSlide {...data} />}
   {data.layout === 'network' && <NetworkSlide {...data} />}
   {data.layout === 'opportunity' && <OpportunitySlide {...data} />}
+  {data.layout === 'mechanics' && <MechanicsSlide {...data} />}
+  {data.layout === 'thesis' && <ThesisSlide {...data} />}
+  {data.layout === 'trajectory' && <TrajectorySlide {...data} />}
   {data.layout === 'closing' && <ClosingSlide {...data} />}
+  {data.layout === 'raise' && <RaiseSlide {...data} />}
 </div>

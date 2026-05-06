@@ -92,6 +92,7 @@ const slides = (await getCollection('slides')).sort((a, b) => a.id.localeCompare
           animateCounters(next);
           animateReveals(next);
           animateGrowthLine(next);
+          animateTrajectory(next);
 
           setTimeout(() => {
             prev.classList.remove('exit-up', 'exit-down');
@@ -118,6 +119,11 @@ const slides = (await getCollection('slides')).sort((a, b) => a.id.localeCompare
           if (line) {
             line.style.transition = 'none';
             line.style.strokeDashoffset = '1200';
+          }
+          const fill = slide.querySelector<HTMLElement>('.trajectory-fill');
+          if (fill) {
+            fill.style.transition = 'none';
+            fill.style.width = '0';
           }
           slide.classList.remove('active');
           void slide.offsetHeight;
@@ -169,9 +175,23 @@ const slides = (await getCollection('slides')).sort((a, b) => a.id.localeCompare
           }, 800);
         }
 
+        function animateTrajectory(slide: HTMLElement) {
+          const fill = slide.querySelector<HTMLElement>('.trajectory-fill');
+          if (!fill) return;
+          const target = fill.dataset.target || '0';
+          fill.style.transition = 'none';
+          fill.style.width = '0';
+          void fill.offsetHeight;
+          setTimeout(() => {
+            fill.style.transition = 'width 1.6s cubic-bezier(.22,1,.36,1)';
+            fill.style.width = target + '%';
+          }, 800);
+        }
+
         updateUI();
         animateCounters(slides[0]);
         animateReveals(slides[0]);
+        animateTrajectory(slides[0]);
 
         document.addEventListener('keydown', (e) => {
           if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') {

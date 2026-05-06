@@ -1,0 +1,26 @@
+---
+import { rich } from '../../lib/rich';
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  subtitle?: string;
+  pillars: { label: string; title: string; desc: string }[];
+}
+
+const { eyebrow, title, subtitle, pillars } = Astro.props;
+---
+<div class="slide-inner">
+  <div class="eyebrow">{eyebrow}</div>
+  <h2 set:html={rich(title)} />
+  {subtitle && <p class="subtitle" set:html={rich(subtitle)} />}
+  <div class="pillar-grid">
+    {pillars.map((p, i) => (
+      <div class="pillar-card">
+        <div class="pillar-num">{String(i + 1).padStart(2, '0')} · {p.label}</div>
+        <div class="pillar-title" set:html={rich(p.title)} />
+        <div class="pillar-desc" set:html={rich(p.desc)} />
+      </div>
+    ))}
+  </div>
+</div>

@@ -1,0 +1,35 @@
+---
+import { rich } from '../../lib/rich';
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  subtitle?: string;
+  steps: { label: string; title: string; desc: string }[];
+  pricing: { amount: string; label: string }[];
+}
+
+const { eyebrow, title, subtitle, steps, pricing } = Astro.props;
+---
+<div class="slide-inner">
+  <div class="eyebrow">{eyebrow}</div>
+  <h2 set:html={rich(title)} />
+  {subtitle && <p class="subtitle" set:html={rich(subtitle)} />}
+  <div class="mechanics-flow">
+    {steps.map((s, i) => (
+      <div class="mechanics-step">
+        <div class="step-num">STEP {i + 1} · {s.label}</div>
+        <div class="step-title" set:html={rich(s.title)} />
+        <div class="step-desc" set:html={rich(s.desc)} />
+      </div>
+    ))}
+  </div>
+  <div class="mechanics-pricing">
+    {pricing.map((p) => (
+      <div class="mechanics-price">
+        <div class="price-amount" set:html={rich(p.amount)} />
+        <div class="price-label" set:html={rich(p.label)} />
+      </div>
+    ))}
+  </div>
+</div>

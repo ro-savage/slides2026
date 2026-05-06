@@ -1,0 +1,46 @@
+---
+import { rich } from '../../lib/rich';
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  subtitle?: string;
+  fillPercent: number;
+  phases: {
+    eyebrow: string;
+    stat: string;
+    desc: string;
+    tone: 'past' | 'present' | 'future';
+  }[];
+}
+
+const { eyebrow, title, subtitle, fillPercent, phases } = Astro.props;
+---
+<div class="slide-inner">
+  <div class="eyebrow">{eyebrow}</div>
+  <h2 set:html={rich(title)} />
+  {subtitle && <p class="subtitle" set:html={rich(subtitle)} />}
+  <div class="trajectory">
+    <div class="trajectory-bar">
+      <div class="trajectory-fill" data-target={fillPercent}></div>
+      <div class="trajectory-marker" style="left:0%">
+        <div class="trajectory-label" style="left:0">START</div>
+      </div>
+      <div class="trajectory-marker present" style={`left:${fillPercent}%`}>
+        <div class="trajectory-label">{fillPercent}%</div>
+      </div>
+      <div class="trajectory-marker target" style="left:100%">
+        <div class="trajectory-label" style="right:0">100%</div>
+      </div>
+    </div>
+    <div class="trajectory-phases">
+      {phases.map((p) => (
+        <div class={`trajectory-phase tone-${p.tone}`}>
+          <div class="phase-eyebrow">{p.eyebrow}</div>
+          <div class="phase-stat" set:html={rich(p.stat)} />
+          <div class="phase-desc" set:html={rich(p.desc)} />
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
