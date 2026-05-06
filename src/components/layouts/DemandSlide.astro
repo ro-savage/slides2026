@@ -5,15 +5,17 @@ import Barrier from '../decorations/Barrier.astro';
 interface Props {
   eyebrow: string;
   title: string;
+  subtitle?: string;
   bullets: string[];
   decoration?: string;
 }
 
-const { eyebrow, title, bullets, decoration } = Astro.props;
+const { eyebrow, title, subtitle, bullets, decoration } = Astro.props;
 ---
 <div class="slide-inner">
   <div class="eyebrow">{eyebrow}</div>
   <h2 set:html={rich(title)} />
+  {subtitle && <p class="subtitle" set:html={rich(subtitle)} />}
   <div class="two-col" style="margin-top:32px">
     <div>
       <ul class="bullet-list">

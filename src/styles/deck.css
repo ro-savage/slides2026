@@ -6,7 +6,7 @@
   --lime:#CCFF00;
   --dark:#201B30;
   --text:#e8edf3;
-  --text-dim:#7a8a9e;
+  --text-dim:#e8edf3;
   --slide-duration:0.8s;
 }
 html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif}
@@ -40,8 +40,8 @@ html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);fon
 }
 .active .eyebrow{animation:fadeUp 0.6s 0.2s forwards}
 h1{
-  font-weight:800;font-size:clamp(32px,5vw,72px);line-height:1.08;
-  letter-spacing:-0.03em;margin-bottom:24px;
+  font-weight:800;font-size:clamp(32px,5vw,72px);line-height:1.18;
+  letter-spacing:-0.03em;margin-bottom:24px;padding-bottom:0.08em;
   opacity:0;transform:translateY(30px);
 }
 .active h1{animation:fadeUp 0.7s 0.3s forwards}
@@ -94,8 +94,8 @@ h2{
 
 /* ── STAT GRID ── */
 .stat-grid{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:24px;margin-top:40px;
+  display:grid;grid-template-columns:repeat(5,1fr);
+  gap:18px;margin-top:40px;
 }
 .stat-card{
   background:rgba(18,90,102,0.12);border:1px solid rgba(18,90,102,0.25);

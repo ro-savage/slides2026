@@ -91,7 +91,6 @@ const slides = (await getCollection('slides')).sort((a, b) => a.id.localeCompare
           updateUI();
           animateCounters(next);
           animateReveals(next);
-          animateGrowthLine(next);
           animateTrajectory(next);
 
           setTimeout(() => {
@@ -115,11 +114,6 @@ const slides = (await getCollection('slides')).sort((a, b) => a.id.localeCompare
             el.style.opacity = '0';
             el.style.transform = 'scale(0.9)';
           });
-          const line = slide.querySelector<SVGPathElement>('.growth-line');
-          if (line) {
-            line.style.transition = 'none';
-            line.style.strokeDashoffset = '1200';
-          }
           const fill = slide.querySelector<HTMLElement>('.trajectory-fill');
           if (fill) {
             fill.style.transition = 'none';
@@ -162,17 +156,6 @@ const slides = (await getCollection('slides')).sort((a, b) => a.id.localeCompare
               el.style.transform = 'scale(1)';
             }, 1200);
           });
-        }
-
-        function animateGrowthLine(slide: HTMLElement) {
-          const line = slide.querySelector<SVGPathElement>('.growth-line');
-          if (!line) return;
-          line.style.transition = 'none';
-          line.style.strokeDashoffset = '1200';
-          setTimeout(() => {
-            line.style.transition = 'stroke-dashoffset 2s cubic-bezier(.22,1,.36,1)';
-            line.style.strokeDashoffset = '0';
-          }, 800);
         }
 
         function animateTrajectory(slide: HTMLElement) {

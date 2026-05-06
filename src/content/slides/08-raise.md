@@ -1,7 +1,7 @@
 ---
 layout: raise
 eyebrow: The raise
-title: "Seeking capital to {highlight:capture the fall protection market.}"
+title: "Seeking capital to {highlight:capture the fall protection market} — a {highlight:$300M niche.}"
 raise:
   amount: "$10M"
   valuation: "at {highlight:$50M USD} valuation"

@@ -6,16 +6,23 @@ interface Props {
   title: string;
   subtitle?: string;
   stats: { value: string; label: string }[];
+  todayLabel?: string;
   tags?: string[];
+  projection?: { label: string; stats: { value: string; label: string }[] };
 }
 
-const { eyebrow, title, subtitle, stats, tags } = Astro.props;
+const { eyebrow, title, subtitle, stats, todayLabel, tags, projection } = Astro.props;
+const SECTION_LABEL_STYLE =
+  'font-family:Space Mono,monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--lime);margin-bottom:14px';
 ---
 <div class="slide-inner">
   <div class="eyebrow">{eyebrow}</div>
   <h2 set:html={rich(title)} />
   {subtitle && <p class="subtitle" set:html={rich(subtitle)} />}
-  <div class="stat-grid">
+  {todayLabel && (
+    <div style={`${SECTION_LABEL_STYLE};margin-top:32px;margin-bottom:0`} set:html={rich(todayLabel)} />
+  )}
+  <div class="stat-grid" style={todayLabel ? 'margin-top:14px' : ''}>
     {stats.map((s) => (
       <div class="stat-card">
         <div class="stat-val">{s.value}</div>
@@ -23,9 +30,29 @@ const { eyebrow, title, subtitle, stats, tags } = Astro.props;
       </div>
     ))}
   </div>
+  {projection && (
+    <div style="margin-top:28px;opacity:0;transform:translateY(10px)" class="reveal-on-active">
+      <div style={SECTION_LABEL_STYLE} set:html={rich(projection.label)} />
+      <div class="stat-grid stat-grid--projection" style="margin-top:0">
+        {projection.stats.map((s) => (
+          <div class="stat-card stat-card--projection">
+            <div class="stat-val" set:html={rich(s.value)} />
+            <div class="stat-label" set:html={rich(s.label)} />
+          </div>
+        ))}
+      </div>
+    </div>
+  )}
   {tags && tags.length > 0 && (
-    <div style="margin-top:32px;display:flex;flex-wrap:wrap;gap:12px;opacity:0;transform:translateY(10px)" class="reveal-on-active">
+    <div style="margin-top:24px;display:flex;flex-wrap:wrap;gap:12px;opacity:0;transform:translateY(10px)" class="reveal-on-active">
       {tags.map((t) => <span class="tag-pill">{t}</span>)}
     </div>
   )}
 </div>
+
+<style>
+  .stat-card--projection {
+    background: rgba(204, 255, 0, 0.04);
+    border: 1px solid rgba(204, 255, 0, 0.22);
+  }
+</style>

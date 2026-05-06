@@ -63,12 +63,25 @@ const statsGridSchema = z.object({
     }),
   ),
   tags: z.array(z.string()).optional(),
+  todayLabel: z.string().optional(),
+  projection: z
+    .object({
+      label: z.string(),
+      stats: z.array(
+        z.object({
+          value: z.string(),
+          label: z.string(),
+        }),
+      ),
+    })
+    .optional(),
 });
 
 const demandSchema = z.object({
   layout: z.literal('demand'),
   eyebrow: z.string(),
   title: z.string(),
+  subtitle: z.string().optional(),
   bullets: z.array(z.string()),
   decoration: z.enum(['barrier']).optional(),
 });
@@ -78,10 +91,10 @@ const networkSchema = z.object({
   eyebrow: z.string(),
   title: z.string(),
   subtitle: z.string().optional(),
-  stats: z.array(
+  effects: z.array(
     z.object({
-      value: z.string(),
-      label: z.string(),
+      headline: z.string(),
+      body: z.string(),
       tone: z.enum(['lime', 'teal']).default('lime'),
     }),
   ),
