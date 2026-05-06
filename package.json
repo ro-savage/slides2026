@@ -8,6 +8,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "deploy": "npm run build && npx wrangler pages deploy dist --project-name=scannable-smartppe-deck",
     "astro": "astro"
   },
   "dependencies": {
