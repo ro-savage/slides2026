@@ -12,7 +12,7 @@ items:
   - year: "2031"
     desc: "IPO at approx {highlight:$100M} revenue, growing {highlight:250%} YoY. {highlight:1.5B} Opporunity."
   - year: "2032 — 2035"
-    desc: "Expand to all PPE industries. {highlight:$1.5B} in revenue. {{highlight:1B} SmartPPE produced. {highlight:$4b} Opportunity."
+    desc: "Expand to all PPE industries. {highlight:$1.5B} in revenue. {highlight:1B} SmartPPE produced. {highlight:$4b} Opportunity."
   - year: ONWARDS
     desc: "Path to {highlight:$4B} in revenue."
 ---
