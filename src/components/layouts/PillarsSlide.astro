@@ -5,7 +5,7 @@ interface Props {
   eyebrow: string;
   title: string;
   subtitle?: string;
-  pillars: { label: string; title: string; desc: string }[];
+  pillars: { label: string; title: string; desc?: string }[];
 }
 
 const { eyebrow, title, subtitle, pillars } = Astro.props;
@@ -19,7 +19,7 @@ const { eyebrow, title, subtitle, pillars } = Astro.props;
       <div class="pillar-card">
         <div class="pillar-num">{String(i + 1).padStart(2, '0')} · {p.label}</div>
         <div class="pillar-title" set:html={rich(p.title)} />
-        <div class="pillar-desc" set:html={rich(p.desc)} />
+        {p.desc && <div class="pillar-desc" set:html={rich(p.desc)} />}
       </div>
     ))}
   </div>

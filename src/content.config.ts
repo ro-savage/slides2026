@@ -24,7 +24,7 @@ const pillarsSchema = z.object({
     z.object({
       label: z.string(),
       title: z.string(),
-      desc: z.string(),
+      desc: z.string().optional(),
     }),
   ),
 });
@@ -94,7 +94,7 @@ const networkSchema = z.object({
   effects: z.array(
     z.object({
       headline: z.string(),
-      body: z.string(),
+      body: z.string().optional(),
       tone: z.enum(['lime', 'teal']).default('lime'),
     }),
   ),
@@ -143,7 +143,7 @@ const thesisSchema = z.object({
   eyebrow: z.string(),
   title: z.string(),
   hypothesis: z.string(),
-  steps: z.array(z.string()),
+  steps: z.array(z.string()).optional(),
 });
 
 const trajectorySchema = z.object({

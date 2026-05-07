@@ -325,7 +325,7 @@ h2{
   opacity:0.6;
 }
 .pillar-card .pillar-num{
-  font-family:'Space Mono',monospace;font-size:11px;
+  font-family:'Space Mono',monospace;font-size:clamp(13px,1.1vw,15px);
   letter-spacing:0.18em;color:var(--text-dim);text-transform:uppercase;
 }
 .pillar-card .pillar-title{
@@ -579,8 +579,8 @@ h2{
   color:var(--lime);letter-spacing:-0.02em;line-height:1;
 }
 .raise-use .use-label{
-  font-size:clamp(13px,1.2vw,15px);color:var(--text);
-  margin-top:10px;font-weight:500;line-height:1.5;
+  font-size:clamp(15px,1.5vw,20px);color:var(--text);
+  margin-top:12px;font-weight:500;line-height:1.4;
 }
 .active .raise-use{animation:fadeUp 0.6s forwards}
 .active .raise-use:nth-child(1){animation-delay:0.85s}
@@ -589,9 +589,9 @@ h2{
 .raise-footer{
   margin-top:36px;
   font-family:'Space Mono',monospace;
-  font-size:clamp(12px,1.2vw,14px);
+  font-size:clamp(14px,1.4vw,18px);
   color:var(--text-dim);letter-spacing:0.08em;
-  line-height:1.6;
+  line-height:1.7;
   opacity:0;transform:translateY(10px);
   padding-top:24px;
   border-top:1px solid rgba(255,255,255,0.06);

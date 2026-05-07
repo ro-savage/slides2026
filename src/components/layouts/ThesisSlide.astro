@@ -5,7 +5,7 @@ interface Props {
   eyebrow: string;
   title: string;
   hypothesis: string;
-  steps: string[];
+  steps?: string[];
 }
 
 const { eyebrow, title, hypothesis, steps } = Astro.props;
@@ -17,12 +17,14 @@ const { eyebrow, title, hypothesis, steps } = Astro.props;
     <div class="hypothesis-tag">HYPOTHESIS</div>
     <div class="hypothesis-body" set:html={rich(hypothesis)} />
   </div>
-  <div class="thesis-proof">
-    {steps.map((step, i) => (
-      <div class="thesis-step">
-        <div class="thesis-num">{i + 1}</div>
-        <div class="thesis-text" set:html={rich(step)} />
-      </div>
-    ))}
-  </div>
+  {steps && steps.length > 0 && (
+    <div class="thesis-proof">
+      {steps.map((step, i) => (
+        <div class="thesis-step">
+          <div class="thesis-num">{i + 1}</div>
+          <div class="thesis-text" set:html={rich(step)} />
+        </div>
+      ))}
+    </div>
+  )}
 </div>
