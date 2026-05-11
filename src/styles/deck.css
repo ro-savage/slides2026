@@ -40,7 +40,7 @@ html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);fon
 }
 .active .eyebrow{animation:fadeUp 0.6s 0.2s forwards}
 h1{
-  font-weight:800;font-size:clamp(32px,5vw,72px);line-height:1.08;
+  font-weight:800;font-size:clamp(32px,5vw,72px);line-height:1.20;
   letter-spacing:-0.03em;margin-bottom:24px;
   opacity:0;transform:translateY(30px);
 }
@@ -53,7 +53,7 @@ h2{
 .active h2{animation:fadeUp 0.7s 0.3s forwards}
 .subtitle{
   font-weight:300;font-size:clamp(16px,2vw,26px);line-height:1.5;
-  color:var(--text-dim);max-width:800px;
+  color:var(--text);max-width:1000px;
   opacity:0;transform:translateY(20px);
 }
 .active .subtitle{animation:fadeUp 0.6s 0.5s forwards}
@@ -112,7 +112,7 @@ h2{
   font-weight:800;font-size:clamp(28px,3vw,44px);color:var(--lime);
   letter-spacing:-0.02em;
 }
-.stat-card .stat-label{font-size:14px;color:var(--text-dim);margin-top:8px;font-weight:400}
+.stat-card .stat-label{font-size:14px;color:var(--text);margin-top:8px;font-weight:400}
 
 /* ── TIMELINE ── */
 .timeline{margin-top:40px;position:relative;padding-left:40px}
@@ -159,7 +159,7 @@ h2{
   font-weight:800;font-size:clamp(24px,3vw,40px);color:var(--lime);
   letter-spacing:-0.02em;
 }
-.rev-card .rev-label{font-size:clamp(13px,1.2vw,16px);color:var(--text-dim);margin-top:6px;line-height:1.5}
+.rev-card .rev-label{font-size:clamp(13px,1.2vw,16px);color:var(--text);margin-top:6px;line-height:1.5}
 .active .rev-card{animation:fadeUp 0.6s forwards}
 .active .rev-card:nth-child(1){animation-delay:0.5s}
 .active .rev-card:nth-child(2){animation-delay:0.65s}
@@ -189,7 +189,7 @@ h2{
 .slide-counter{
   position:fixed;bottom:36px;right:40px;
   font-family:'Space Mono',monospace;font-size:13px;
-  color:var(--text-dim);z-index:100;letter-spacing:0.1em;
+  color:var(--text);z-index:100;letter-spacing:0.1em;
 }
 
 /* ── LOGO ── */
@@ -326,14 +326,14 @@ h2{
 }
 .pillar-card .pillar-num{
   font-family:'Space Mono',monospace;font-size:11px;
-  letter-spacing:0.18em;color:var(--text-dim);text-transform:uppercase;
+  letter-spacing:0.18em;color:var(--text);text-transform:uppercase;
 }
 .pillar-card .pillar-title{
   font-size:clamp(20px,2vw,28px);font-weight:700;color:var(--lime);
   margin-top:10px;letter-spacing:-0.02em;line-height:1.1;
 }
 .pillar-card .pillar-desc{
-  font-size:clamp(13px,1.2vw,15px);color:var(--text-dim);
+  font-size:clamp(13px,1.2vw,15px);color:var(--text);
   margin-top:10px;line-height:1.55;
 }
 .active .pillar-card{animation:fadeUp 0.55s forwards}
@@ -371,7 +371,7 @@ h2{
   color:var(--text);margin-top:8px;letter-spacing:-0.01em;line-height:1.2;
 }
 .mechanics-step .step-desc{
-  font-size:clamp(13px,1.2vw,15px);color:var(--text-dim);
+  font-size:clamp(13px,1.2vw,15px);color:var(--text);
   margin-top:8px;line-height:1.55;
 }
 .active .mechanics-step{animation:fadeUp 0.55s forwards}
@@ -398,7 +398,7 @@ h2{
   color:var(--lime);letter-spacing:-0.02em;line-height:1;
 }
 .mechanics-price .price-label{
-  font-size:12px;color:var(--text-dim);
+  font-size:12px;color:var(--text);
   margin-top:6px;letter-spacing:0.04em;line-height:1.4;
 }
 @media(max-width:900px){
@@ -445,6 +445,14 @@ h2{
   margin-bottom:12px;
   box-shadow:0 0 16px rgba(204,255,0,0.35);
 }
+.thesis-step .thesis-heading{
+  font-size:clamp(15px,1.4vw,18px);
+  color:var(--lime);
+  font-weight:600;
+  letter-spacing:-0.01em;
+  margin-bottom:6px;
+  line-height:1.25;
+}
 .thesis-step .thesis-text{
   font-size:clamp(13px,1.25vw,16px);color:var(--text);
   line-height:1.55;
@@ -454,6 +462,7 @@ h2{
 .active .thesis-step:nth-child(2){animation-delay:0.85s}
 .active .thesis-step:nth-child(3){animation-delay:1.0s}
 .active .thesis-step:nth-child(4){animation-delay:1.15s}
+.active .thesis-step:nth-child(5){animation-delay:1.30s}
 
 /* ── TRAJECTORY LAYOUT ── */
 .trajectory{margin-top:48px;position:relative}
@@ -475,7 +484,7 @@ h2{
   position:absolute;top:-8px;
   width:22px;height:22px;border-radius:50%;
   background:var(--bg);
-  border:3px solid var(--text-dim);
+  border:3px solid var(--text);
   transform:translateX(-50%);
 }
 .trajectory-marker.present{
@@ -489,7 +498,7 @@ h2{
   transform:translateX(-50%);
   white-space:nowrap;
   font-family:'Space Mono',monospace;
-  font-size:11px;color:var(--text-dim);
+  font-size:11px;color:var(--text);
   letter-spacing:0.16em;
 }
 .trajectory-marker.present .trajectory-label{color:var(--lime)}
@@ -515,7 +524,7 @@ h2{
 }
 .trajectory-phase .phase-eyebrow{
   font-family:'Space Mono',monospace;font-size:11px;
-  letter-spacing:0.18em;color:var(--text-dim);text-transform:uppercase;
+  letter-spacing:0.18em;color:var(--text);text-transform:uppercase;
 }
 .trajectory-phase.tone-present .phase-eyebrow{color:var(--lime)}
 .trajectory-phase.tone-future .phase-eyebrow{color:var(--teal-light)}
@@ -525,7 +534,7 @@ h2{
 }
 .trajectory-phase.tone-present .phase-stat{color:var(--lime)}
 .trajectory-phase .phase-desc{
-  font-size:clamp(13px,1.2vw,15px);color:var(--text-dim);
+  font-size:clamp(13px,1.2vw,15px);color:var(--text);
   margin-top:8px;line-height:1.5;
 }
 .active .trajectory-phase{animation:fadeUp 0.55s forwards}
@@ -554,7 +563,7 @@ h2{
 .active .raise-amount .raise-number{animation:popIn 0.8s 0.3s forwards}
 .raise-amount .raise-valuation{
   font-size:clamp(18px,2vw,28px);
-  color:var(--text-dim);font-weight:300;
+  color:var(--text);font-weight:300;
   opacity:0;transform:translateY(10px);letter-spacing:-0.01em;
 }
 .active .raise-amount .raise-valuation{animation:fadeUp 0.6s 0.65s forwards}
@@ -590,7 +599,7 @@ h2{
   margin-top:36px;
   font-family:'Space Mono',monospace;
   font-size:clamp(12px,1.2vw,14px);
-  color:var(--text-dim);letter-spacing:0.08em;
+  color:var(--text);letter-spacing:0.08em;
   line-height:1.6;
   opacity:0;transform:translateY(10px);
   padding-top:24px;

@@ -1,7 +1,7 @@
 ---
 layout: timeline
 eyebrow: Path forward
-title: "Path to {highlight:1 billion} items."
+title: "Path to {highlight:3 billion} items."
 items:
   - year: "2026"
     desc: "Focused on {highlight:Fall Protection.} Contracts cover {highlight:4%} of items manufactured, {highlight:50%} in active negotiations."

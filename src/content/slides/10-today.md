@@ -2,7 +2,7 @@
 layout: stats-grid
 eyebrow: SmartPPE today
 title: "Built, patented, {highlight:unmatched.}"
-subtitle: "The only worldwide database and platform covering digital identity, compliance and tracing for critical safety equipment."
+subtitle: "The {highlight:only platform} covering digital identity, embedded hardware, inventory and compliance for critical safety equipment."
 stats:
   - value: "50"
     label: Manufacturers
@@ -12,11 +12,11 @@ stats:
     label: SmartPPE produced
   - value: "1,000"
     label: Products
-  - value: "75K"
+  - value: "100K"
     label: Products with data
 tags:
   - Patented technology
+  - Industry proven
   - Exclusive partnerships
-  - NFC + QR + RFID + Datagrid
   - Global coverage
 ---

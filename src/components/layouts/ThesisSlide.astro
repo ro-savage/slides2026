@@ -1,11 +1,16 @@
 ---
 import { rich } from '../../lib/rich';
 
+interface Step {
+  heading: string;
+  body: string;
+}
+
 interface Props {
   eyebrow: string;
   title: string;
   hypothesis: string;
-  steps: string[];
+  steps: Step[];
 }
 
 const { eyebrow, title, hypothesis, steps } = Astro.props;
@@ -20,8 +25,8 @@ const { eyebrow, title, hypothesis, steps } = Astro.props;
   <div class="thesis-proof">
     {steps.map((step, i) => (
       <div class="thesis-step">
-        <div class="thesis-num">{i + 1}</div>
-        <div class="thesis-text" set:html={rich(step)} />
+        <div class="thesis-heading" set:html={rich(step.heading)} />
+        <div class="thesis-text" set:html={rich(step.body)} />
       </div>
     ))}
   </div>

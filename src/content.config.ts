@@ -130,7 +130,12 @@ const thesisSchema = z.object({
   eyebrow: z.string(),
   title: z.string(),
   hypothesis: z.string(),
-  steps: z.array(z.string()),
+  steps: z.array(
+    z.object({
+      heading: z.string(),
+      body: z.string(),
+    }),
+  ),
 });
 
 const trajectorySchema = z.object({
